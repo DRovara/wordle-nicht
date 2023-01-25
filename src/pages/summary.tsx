@@ -41,7 +41,7 @@ function copyResult(gameState: GameState, overType: number): void {
     let text = "";
     if(overType == 1) {
         text = "Hurra! Ich habe heute nicht gewordlet!\n\n";
-    } else if(overType == 2) {
+    } else if(overType >= 2) {
         text = "Oh nein... Ich habe gewordlet!\n\n";
     }
     text += visualise(gameState) + "\n";

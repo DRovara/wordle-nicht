@@ -45,7 +45,7 @@ export default function Help(props: HelpProps) {
                 <div className={styles.separator}></div>
 
                 <div className={styles.summaryItem}>
-                    <div><h4>Mehr?</h4> Komm zur github Seite: <a href="github.com/DRovara/wordle-nicht">github.com/DRovara/wordle-nicht</a></div>
+                    <div><h4>Mehr?</h4> Komm zur github Seite: <a href="http://www.github.com/DRovara/wordle-nicht">github.com/DRovara/wordle-nicht</a></div>
                 </div>
             </div>
         </>
