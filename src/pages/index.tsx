@@ -35,7 +35,6 @@ export default function Home() {
             showSummary();
         setHistory(GameStorage.loadHistory());
     }, []);
-    console.log(gameState.getSolution());
 
     const toast = useRef<Toast>(null);
 
@@ -144,6 +143,7 @@ export default function Home() {
             return;
         if(gameState.checkOver() != 0)
             return;
+        gameData[currentRow] = ["", "", "", "", ""];
         gameState.undo();
         gameData[currentRow - 1] = ["", "", "", "", ""];
         setCurrentRow(currentRow => currentRow - 1);
@@ -165,7 +165,7 @@ export default function Home() {
                 <title>Wordle nicht!</title>
                 <meta name="description" content="Schaffst du es, nicht zu wordlen?" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="favicon.png" />
             </Head>
             <TitleBar statsClick={showSummary} helpClick={showHelp}></TitleBar>
             <Summary gameState={gameState} undos={5 - gameState.getUndoCount()} overType={gameOver} visible={summaryVisible} closeCick={hideSummary} played={history.played} wins={history.wins} streak={history.streak} bestStreak={history.bestStreak} distribution={history.distribution}></Summary>

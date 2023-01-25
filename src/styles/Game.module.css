@@ -14,7 +14,7 @@
     display: flex;
     flex-direction: row;
     flex-basis: 0;
-}
+}   
 
 .boardRowShakey {
     animation: shake 0.4s 1 linear;

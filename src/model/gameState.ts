@@ -161,7 +161,6 @@ class GameState {
         this.history = [];
         this.undos = 5;
         this.remainingWords = this.dictionary.map((val) => val);
-        console.log(history);
 
         for(const guess of history) {
             if(guess == "UNDO") {
