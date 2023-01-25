@@ -1,0 +1,149 @@
+.boxVisible, .boxHidden {
+    height: 80vh;
+    position: fixed;
+    left: 0;
+    width: 100vw;
+    background-color: white;
+    z-index: 10;
+
+    --border-radius: 10px;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+
+    box-shadow: 0px -5px 15px #00000055;
+
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 35px;
+
+    transition: top 0.4s ease-in;
+}
+
+.boxVisible {
+    top: 20vh;
+}
+
+.boxHidden {
+    top: 120vh;
+}
+
+.summaryItem {
+    text-align: center;
+}
+
+.statisticsBox {
+    display: flex;
+    flex-direction: row;
+}
+
+.statisticsBoxEntry {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.separator {
+    width: 90%;
+    height: 2px;
+    background-color: #00000044;
+    margin-left: 5%;
+
+    --separator-margin: 3vh;
+    margin-top: var(--separator-margin);
+    margin-bottom: var(--separator-margin);
+}
+
+.distributionBox {
+    display: flex;
+    flex-direction: column;
+
+    --distributionBoxPadding: 3vw;
+    padding-left: var(--distributionBoxPadding);
+    padding-right: var(--distributionBoxPadding);
+}
+
+.distributionBoxEntry {
+    display: flex;
+    flex-direction: row;
+    height: 2vh;
+    margin-bottom: 0.5vh;
+}
+
+.distributionBoxEntry h3 {
+    width: 10%;
+    margin-top: -0.5vh;
+}
+
+.distributionBoxBarEntry {
+    flex-grow: 8;
+}
+
+.barActive, .barInactive {
+    height: 1.8vh;
+    margin-top: 0.1vh;
+    width: 100%;
+    padding-right: 5px;
+    text-align: right;
+    color: white;
+}
+
+.barActive {
+    background-color: var(--green);
+}
+
+.barInactive {
+    background-color: #999999;
+}
+
+.barText {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.shareButton {
+    margin-left: 30vw;
+    width: 40vw;
+    height: 5vh;
+    border-radius: 20px;
+    background-color: var(--green);
+    border: 0;
+    font-weight: bolder;
+    color: white;
+}
+
+.shareButton:hover {
+    background-image: linear-gradient(rgb(0 0 0/10%) 0 0);
+}
+
+.shareButton:active {
+    background-image: linear-gradient(rgb(0 0 0/20%) 0 0);
+}
+
+.closeButton {
+    position: absolute;
+    right: 2vw;
+    top: 2vw;
+    width: 8vw;
+    height: 8vw;
+
+    border-radius: 50%;
+    border: 0;
+    background-color: white;
+}
+
+.closeButton img {
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    width: 50%;
+    height: 50%;
+}
+
+.closeButton:hover {
+    background-image: linear-gradient(rgb(0 0 0/10%) 0 0);
+}
+
+.closeButton:active {
+    background-image: linear-gradient(rgb(0 0 0/20%) 0 0);
+}

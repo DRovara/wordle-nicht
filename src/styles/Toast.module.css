@@ -1,0 +1,26 @@
+.toastVisible, .toastHidden {
+    background-color: rgb(var(--foreground-rgb));
+    color: rgb(var(--background-rgb));
+    position: fixed;
+    top: 10vh;
+    left: 50vw;
+    padding: 10px;
+    min-width: 30vw;
+    text-align: center;
+
+    transform: translate(-50%, 0);
+    border-radius: 10px;
+    z-index: 8;
+    font-weight: bold;
+    font-size: large;
+
+    transition: opacity 0.5s ease-in;
+}
+
+.toastHidden {
+    opacity: 0;
+}
+
+.toastVisible {
+    visibility: 1;
+}

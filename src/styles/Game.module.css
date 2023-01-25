@@ -1,0 +1,108 @@
+.container {
+    width: 75vw;
+    height: 90vw;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.boardRow, .boardRowShakey {
+    margin-bottom: 5px;
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: row;
+    flex-basis: 0;
+}
+
+.boardRowShakey {
+    animation: shake 0.4s 1 linear;
+}
+
+.boardCell, .boardCellLast {
+    border: 2px solid black;
+    flex-grow: 1;
+    flex-basis: 0;
+    text-align: center;
+}
+
+.boardCell {
+    margin-right: 5px;
+}
+
+.boardCellSelected {
+    box-shadow: 0px 0px 3px 3px #00000055;
+}
+
+.contents {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+.cellGrey, .cellAmber, .cellGreen {
+    color: white;
+    animation: rotation 0.4s 1 linear;
+}
+
+.cellGrey {
+    background-color: rgb(120, 124, 126);
+    border-color: rgb(120, 124, 126);
+}
+
+.cellAmber {
+    background-color: rgb(200, 180, 88);
+    border-color: rgb(200, 180, 88);
+
+}
+
+.cellGreen {
+    background-color: rgb(100, 170, 100);
+    border-color: rgb(100, 170, 100);
+}
+
+@keyframes rotation {
+    from {
+        transform: rotateX(180deg);
+    }
+    to {
+        transform: rotateX(359deg);
+    }
+}
+
+.contentsEntered {
+    animation: appear 0.5s 1 linear;
+}
+
+@keyframes appear {
+    from {
+        visibility: hidden;
+    }
+    50% {
+        visibility: hidden;
+    }
+    to {
+        visibility: visible;
+    }
+}
+
+@keyframes shake {
+    from {
+        transform: translate(-1vw, 0);
+    }
+    25% {
+        transform: translate(1vw, 0);
+    }
+    50% {
+        transform: translate(-1vw, 0);
+    }
+    75% {
+        transform: translate(1vw, 0);
+    }
+    to {
+        transform: translate(0vw, 0);
+    }
+}

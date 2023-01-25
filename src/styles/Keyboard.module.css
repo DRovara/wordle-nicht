@@ -1,0 +1,68 @@
+.container {
+    position: fixed;
+    left: 2vw;
+    bottom: 0.5vh;
+    width: 96vw;
+    height: 30vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.keyboardRow {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.keyboardKey, .keyboardKeyLast {
+    border-radius: 2px;
+    border: 2px solid black;
+    flex-grow: 1;
+    margin-bottom: 1vh;
+    text-align: center;
+}
+
+.keyWhite {
+    background-color: white;
+    border-color: black;
+}
+
+.keyAmber {
+    background-color: var(--code-amber);
+    color: white;
+}
+
+.keyGrey {
+    background-color: var(--code-grey);
+    color: white;
+}
+
+.keyGreen {
+    background-color: var(--code-green);
+    color: white;
+}
+
+.keyboardKey {
+    margin-right: 1vw;
+    font-weight: bold;
+}
+
+.enterKey {
+    --key-height: 6vw;
+    height: var(--key-height);
+}
+
+.backspaceKey {
+    --key-height: 4vw;
+    height: var(--key-height);
+}
+
+.keyboardKey:hover, .keyboardKeyLast:hover {
+    background-image: linear-gradient(rgb(0 0 0/10%) 0 0);
+}
+
+.keyboardKey:active, .keyboardKeyLast:active {
+    background-image: linear-gradient(rgb(0 0 0/20%) 0 0);
+}
+
