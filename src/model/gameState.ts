@@ -229,9 +229,12 @@ class GameState {
 
     public getUndone(): string[] {
         const result: string[] = [];
+        const stack: string[] = [];
         for(let i = 0; i < this.history.length; i++) {
-            if(this.history[i] == "UNDO") {
-                result.push(this.history[i - 1]);
+            if(this.history[i] != "UNDO") {
+                stack.push(this.history[i]);
+            } else {
+                result.push(stack.pop()!);
             }
         }
         return result;
@@ -239,10 +242,9 @@ class GameState {
 
     public getUndoneResults(): number[][] {
         const result: number[][] = [];
-        for(let i = 0; i < this.history.length; i++) {
-            if(this.history[i] == "UNDO") {
-                result.push(this.testWord(this.history[i - 1]));
-            }
+        const words = this.getUndone();
+        for(const word of words) {
+            result.push(this.testWord(word));
         }
         return result;
     }

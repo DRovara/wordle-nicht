@@ -19,7 +19,9 @@ def combine(paths: str, output: str) -> None:
         file.writelines(l)
 
 if __name__ == "__main__":
-    inputs = ["deutsch.txt", "deutsch2.txt", "at.txt", "65.txt"]
+    #inputs = ["deutsch.txt", "deutsch2.txt", "at.txt", "65.txt"]
+    inputs = ["deutsch.txt", "deutsch2.txt"]
+    output = "solutions.txt" #"wordlist.txt"
     for i, inp in enumerate(inputs):
         make(inp, "temp" + str(i))
-    combine(["temp" + str(i) for i, _ in enumerate(inputs)], "wordlist.txt")
+    combine(["temp" + str(i) for i, _ in enumerate(inputs)], output)

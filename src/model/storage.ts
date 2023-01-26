@@ -10,7 +10,7 @@ type GameHistory = {
 
 class GameStorage {
     private static historyName: string = "history";
-    private static guessName: string = "guesses";
+    private static guessName: string = "guessesList";
 
     public static storeHistory(history: GameHistory) {
         GameStorage.setPermanentCookie(GameStorage.historyName, JSON.stringify(history));
