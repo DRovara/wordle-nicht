@@ -13,10 +13,9 @@ type UndoHistoryProps = {
     closeFunction: () => void,
 };
 
-type UndoHistoryState = {
-};
-
 export default function UndoHistory(props: UndoHistoryProps) {
+    if(props.words == undefined)
+        return (<div></div>)
     return (
         <div className={props.visible ? styles.visible : styles.hidden}>
             {
