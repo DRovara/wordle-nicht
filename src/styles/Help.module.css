@@ -1,5 +1,5 @@
 .boxVisible, .boxHidden {
-    height: 80%;
+    height: calc(var(--vh, 1vh) * 85); /*VH*/
     position: fixed;
     left: 0;
     width: 100vw;
@@ -16,12 +16,14 @@
     flex-direction: column;
 
     padding-top: 25px;
+    padding-bottom: 10px;
 
     transition: top 0.4s ease-in;
+    justify-content: space-between;
 }
 
 .boxVisible {
-    top: 20%;
+    bottom: 0;
 }
 
 .boxHidden {
@@ -48,9 +50,6 @@
     background-color: #00000044;
     margin-left: 5%;
 
-    --separator-margin-help: 1.5%;
-    margin-top: var(--separator-margin-help);
-    margin-bottom: var(--separator-margin-help);
 }
 
 .closeButton {

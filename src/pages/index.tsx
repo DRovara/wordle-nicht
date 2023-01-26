@@ -34,6 +34,14 @@ export default function Home() {
         if(gameState.checkOver())
             showSummary();
         setHistory(GameStorage.loadHistory());
+
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+        window.addEventListener('resize', () => {
+            // We execute the same script as before
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        });
     }, []);
 
     const toast = useRef<Toast>(null);

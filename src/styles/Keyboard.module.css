@@ -3,7 +3,7 @@
     left: 2vw;
     bottom: 0.5vh;
     width: 96vw;
-    height: 30%;
+    height: calc(var(--vh, 1vh) * 30); /*VH*/
 
     display: flex;
     flex-direction: column;

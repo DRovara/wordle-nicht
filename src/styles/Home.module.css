@@ -4,17 +4,17 @@
   justify-content: space-between;
   align-items: center;
   min-height: 100vh;
-  padding-top: 7vh;
+  padding-top: calc(var(--vh, 1vh) * 7); /*VH*/
 }
 
 .gameView {
   display: flex;
   flex-direction: column;
   position: fixed;
-  top: 7vh;
+  top: calc(var(--vh, 1vh) * 7); /*VH*/
   left: 0vw;
   width: 100vw;
-  height: 55%;
+  height: calc(var(--vh, 1vh) * 55); /*VH*/
   padding-left: 12.5vw;
   padding-right: 12.5vw;
 }
@@ -36,7 +36,7 @@
 .undoRow {
   display: flex;
   position: fixed;
-  top: 63%;
+  top: calc(var(--vh, 1vh) * 63); /*VH*/
 }
 
 .undoButton {
