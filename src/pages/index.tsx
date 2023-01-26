@@ -11,6 +11,7 @@ import Game from './game'
 import { GameState } from '@/model/gameState'
 import Toast from './toast'
 import { GameHistory, GameStorage } from '@/model/storage'
+import UndoHistory from './undoHistory'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -166,6 +167,11 @@ export default function Home() {
         return () => document.removeEventListener("keydown", keyboardDown);
     });
 
+    const [showUndoHistory, setShowUndoHistory] = useState(false);
+    const hideUndoHistory = () => {
+        setShowUndoHistory(false);
+    };
+
 
     return (
         <>
@@ -179,6 +185,7 @@ export default function Home() {
             <Summary showMessage={(msg: string) => toast.current?.show(msg, 2000)} gameState={gameState} undos={5 - gameState.getUndoCount()} overType={gameOver} visible={summaryVisible} closeCick={hideSummary} played={history.played} wins={history.wins} streak={history.streak} bestStreak={history.bestStreak} distribution={history.distribution}></Summary>
             <Help visible={helpVisible} closeCick={hideHelp}></Help>
             <Toast ref={toast}></Toast>
+            <UndoHistory closeFunction={hideUndoHistory} visible={showUndoHistory} words={gameState.getUndone()} results={gameState.getUndoneResults()}></UndoHistory>
             <main className={styles.main}>
                 <div className={styles.gameView}>
                     <div className={styles.info}>
@@ -188,6 +195,7 @@ export default function Home() {
                     <Game shake={shake} results={gameState.getResultMatrix()} data={gameData} activeRow={currentRow} activeColumn={currentColumn} boardClicked={boardClick}></Game>
                     
                     <div className={styles.undoRow}>
+                        <button className={styles.undoButton} ref={undoButtonRef} onClick={() => setShowUndoHistory(true)}>Vorherige UPS!</button>
                         <button className={styles.undoButton} ref={undoButtonRef} onClick={undo}>UPS!</button>
                     </div>
                 </div>

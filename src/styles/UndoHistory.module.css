@@ -1,0 +1,104 @@
+.visible, .hidden {
+    background-color: rgb(var(--background-rgb));
+    color: rgb(var(--foreground-rgb));
+    box-shadow: 0px 0px 3px 3px #00000055;
+    position: fixed;
+    top: 20vh; /*VH*/
+    left: 10vw;
+    padding: 10px;
+    width: 80vw;
+    text-align: center;
+
+    border-radius: 10px;
+    z-index: 8;
+    font-weight: bold;
+    font-size: large;
+
+    transition: opacity 0.2s ease-out;
+
+    height: 40vh; /*VH*/
+
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+}
+
+.boardRow {
+    margin-bottom: 5px;
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: row;
+    flex-basis: 0;
+    justify-content: space-between;
+}   
+
+.boardCell, .boardCellLast {
+    border: 2px solid black;
+    flex-grow: 1;
+    flex-basis: 0;
+    text-align: center;
+}
+
+.boardCell {
+    margin-right: 5px;
+}
+
+.contents {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-weight: bolder;
+    font-size: xx-large;
+    color: white;
+}
+
+.cellGrey {
+    background-color: rgb(120, 124, 126);
+    border-color: rgb(120, 124, 126);
+}
+
+.cellAmber {
+    background-color: rgb(200, 180, 88);
+    border-color: rgb(200, 180, 88);
+
+}
+
+.cellGreen {
+    background-color: rgb(100, 170, 100);
+    border-color: rgb(100, 170, 100);
+}
+
+.invisibleRow {
+    visibility: hidden;
+}
+
+.okButton {
+    flex-grow: 1;
+    background-color: rgb(var(--background-rgb));
+    border: 2px solid rgb(var(--foreground-rgb));
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    font-size: x-large;
+    font-weight: bold;
+    width: 75vw;
+    height: calc(var(--vh, 1vh) * 5); /*VH*/
+    font-size: calc(var(--vh, 1vh) * 2.8); /*VH*/
+}
+
+.okButton:hover {
+    background-image: linear-gradient(rgb(0 0 0/10%) 0 0);
+}
+
+.okButton:active {
+    background-image: linear-gradient(rgb(0 0 0/20%) 0 0);
+}

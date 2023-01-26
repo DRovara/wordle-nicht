@@ -13,7 +13,7 @@ class GameState {
     private dictionary: string[];
 
     private history: string[];
-
+    
     public constructor() {
         const allWords = WordList.allWords;
 
@@ -225,6 +225,26 @@ class GameState {
 
     public getGuesses(): string[] {
         return this.guesses;
+    }
+
+    public getUndone(): string[] {
+        const result: string[] = [];
+        for(let i = 0; i < this.history.length; i++) {
+            if(this.history[i] == "UNDO") {
+                result.push(this.history[i - 1]);
+            }
+        }
+        return result;
+    }
+
+    public getUndoneResults(): number[][] {
+        const result: number[][] = [];
+        for(let i = 0; i < this.history.length; i++) {
+            if(this.history[i] == "UNDO") {
+                result.push(this.testWord(this.history[i - 1]));
+            }
+        }
+        return result;
     }
 }
 

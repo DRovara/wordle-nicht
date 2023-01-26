@@ -37,6 +37,8 @@
   display: flex;
   position: fixed;
   top: calc(var(--vh, 1vh) * 63); /*VH*/
+  flex-direction: row;
+  width: 75vw;
 }
 
 .undoButton {
@@ -47,9 +49,8 @@
   padding-right: 2vw;
   padding-top: 0.5vh;
   padding-bottom: 0.5vh;
-  font-size: x-large;
   font-weight: bold;
-  width: 75vw;
+  margin-right: 1vw;
   height: calc(var(--vh, 1vh) * 5); /*VH*/
   font-size: calc(var(--vh, 1vh) * 2.8); /*VH*/
 }
