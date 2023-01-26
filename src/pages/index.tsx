@@ -148,6 +148,9 @@ export default function Home() {
 
     const undoButtonRef = useRef<HTMLButtonElement>(null);
     const undo = () => {
+        undoButtonRef.current?.blur();
+        if(gameState.getUndoCount() == 0)
+            return;
         if(currentRow == 0)
             return;
         if(gameState.checkOver() != 0)
@@ -158,7 +161,6 @@ export default function Home() {
         setCurrentRow(currentRow => currentRow - 1);
         setCurrentColumn(0);
         setDummy(dummy + 1);
-        undoButtonRef.current?.blur();
     }
 
     useEffect(() => {
@@ -195,7 +197,7 @@ export default function Home() {
                     <Game shake={shake} results={gameState.getResultMatrix()} data={gameData} activeRow={currentRow} activeColumn={currentColumn} boardClicked={boardClick}></Game>
                     
                     <div className={styles.undoRow}>
-                        <button className={styles.undoButton} ref={undoButtonRef} onClick={() => setShowUndoHistory(true)}>Vorherige UPS!</button>
+                        <button className={styles.undoButton} onClick={() => setShowUndoHistory(true)}>Vorherige UPS!</button>
                         <button className={styles.undoButton} ref={undoButtonRef} onClick={undo}>UPS!</button>
                     </div>
                 </div>
