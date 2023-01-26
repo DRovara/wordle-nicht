@@ -51,7 +51,7 @@
   font-weight: bold;
   width: 75vw;
   height: calc(var(--vh, 1vh) * 5); /*VH*/
-  font-size: x-large;
+  font-size: calc(var(--vh, 1vh) * 2.8); /*VH*/
 }
 
 .undoButton:hover {
