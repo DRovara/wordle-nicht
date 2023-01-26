@@ -176,7 +176,7 @@ export default function Home() {
                 <link rel="icon" href="favicon.png" />
             </Head>
             <TitleBar statsClick={showSummary} helpClick={showHelp}></TitleBar>
-            <Summary gameState={gameState} undos={5 - gameState.getUndoCount()} overType={gameOver} visible={summaryVisible} closeCick={hideSummary} played={history.played} wins={history.wins} streak={history.streak} bestStreak={history.bestStreak} distribution={history.distribution}></Summary>
+            <Summary showMessage={(msg: string) => toast.current?.show(msg, 2000)} gameState={gameState} undos={5 - gameState.getUndoCount()} overType={gameOver} visible={summaryVisible} closeCick={hideSummary} played={history.played} wins={history.wins} streak={history.streak} bestStreak={history.bestStreak} distribution={history.distribution}></Summary>
             <Help visible={helpVisible} closeCick={hideHelp}></Help>
             <Toast ref={toast}></Toast>
             <main className={styles.main}>

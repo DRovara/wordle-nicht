@@ -20,6 +20,8 @@ type SummaryProps = {
     overType: number,
     undos: number,
     gameState: GameState,
+
+    showMessage: (message: string) => void,
 }
 
 function visualise(gameState: GameState): string {
@@ -105,6 +107,10 @@ export default function Summary(props: SummaryProps) { //TODO title
     }
 
     const copy = () => {
+        if(props.overType == 0) {
+            props.showMessage("Beende die Runde, bevor du deine Ergebnisse teilst!")
+            return;
+        }
         copyResult(props.gameState, props.overType);
         setCopied(true);
     }
