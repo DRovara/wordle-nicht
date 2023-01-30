@@ -74,7 +74,7 @@ export default function Home() {
         }
         if(ok == -2) {
             setShake(true);
-            toast.current?.show("Bitte verwende alle bestätigten Buchstaben!", 2000);
+            toast.current?.show("Diese Eingabe ist nicht regelkonform!", 2000);
             setTimeout(() => setShake(false), 1000);
             return;
         }
