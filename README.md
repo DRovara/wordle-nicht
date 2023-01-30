@@ -73,9 +73,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<center>
+<div align="center">
  <img src="images/screenshot.png" alt="alt text" width="50%">
- </center>
+</div>
 
 This is a German implementation of the word game "Don't Wordle", a variation of "Wordle" where it is your goal, to <b>NOT</b> find the daily solution.
 
