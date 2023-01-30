@@ -66,3 +66,25 @@
     background-image: linear-gradient(rgb(0 0 0/20%) 0 0);
 }
 
+@media (min-width:961px) {
+    .container {
+        width: 40vw;
+        left: 30vw;
+    }
+
+    .enterKey {
+        --key-height: 4vh;
+        height: var(--key-height);
+    }
+    
+    .backspaceKey {
+        --key-height: 3vh;
+        height: var(--key-height);
+    }
+
+    .keyboardRow {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+    }
+}

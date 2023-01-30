@@ -22,7 +22,7 @@
 .info {
   display: flex;
   flex-direction: row;
-  width: 75vw;
+  width: 100%;
   margin-bottom: 1vh;
 }
 
@@ -41,7 +41,7 @@
   width: 75vw;
 }
 
-.undoButton {
+.undoButton, .undoHistoryButton {
   flex-grow: 1;
   background-color: rgb(var(--background-rgb));
   border: 2px solid rgb(var(--foreground-rgb));
@@ -50,9 +50,12 @@
   padding-top: 0.5vh;
   padding-bottom: 0.5vh;
   font-weight: bold;
-  margin-right: 1vw;
   height: calc(var(--vh, 1vh) * 5); /*VH*/
   font-size: calc(var(--vh, 1vh) * 2.8); /*VH*/
+}
+
+.undoHistoryButton {
+  margin-right: 1vw;
 }
 
 .undoButton:hover {
@@ -61,4 +64,21 @@
 
 .undoButton:active {
   background-image: linear-gradient(rgb(0 0 0/20%) 0 0);
+}
+
+@media (min-width:961px) {
+  .gameView {
+    width: 50vw;
+    left: 25vw;
+  }
+
+  .undoRow {
+    width: 25vw;
+  }
+
+  .undoHistoryButton {
+    margin-right: 0.25vw;
+  }
+
+
 }

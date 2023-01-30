@@ -197,7 +197,7 @@ export default function Home() {
                     <Game shake={shake} results={gameState.getResultMatrix()} data={gameData} activeRow={currentRow} activeColumn={currentColumn} boardClicked={boardClick}></Game>
                     
                     <div className={styles.undoRow}>
-                        <button className={styles.undoButton} onClick={() => setShowUndoHistory(true)}>Vorherige UPS!</button>
+                        <button className={styles.undoHistoryButton} onClick={() => setShowUndoHistory(true)}>Vorherige UPS!</button>
                         <button className={styles.undoButton} ref={undoButtonRef} onClick={undo}>UPS!</button>
                     </div>
                 </div>

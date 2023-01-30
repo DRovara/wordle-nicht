@@ -54,3 +54,21 @@
     top: 50%;
     transform: translate(0, -50%);
 }
+
+@media (min-width:961px) {
+    .statsButton, .helpButton {
+        width: 4vh;
+        height: 4vh;
+    }
+
+    .statsButton {
+        right: 1vh;
+    }
+
+    .helpButton {
+        left: auto;
+        right: 6vh;
+    }
+
+
+}

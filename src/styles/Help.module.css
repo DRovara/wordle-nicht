@@ -79,3 +79,24 @@
 .closeButton:active {
     background-image: linear-gradient(rgb(0 0 0/20%) 0 0);
 }
+
+@media (min-width:961px) {
+    .boxVisible, .boxHidden {
+        height: calc(var(--vh, 1vh) * 50); /*VH*/
+        padding-left: 20vw;
+        padding-right: 20vw;
+        padding-bottom: 5vh;
+    }
+
+    .closeButton {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 5vh;
+        height: 5vh;
+    
+        border-radius: 50%;
+        border: 0;
+        background-color: white;
+    }
+}

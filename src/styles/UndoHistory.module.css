@@ -91,7 +91,7 @@
     padding-bottom: 0.5vh;
     font-size: x-large;
     font-weight: bold;
-    width: 75vw;
+    width: 100%;
     height: calc(var(--vh, 1vh) * 5); /*VH*/
     font-size: calc(var(--vh, 1vh) * 2.8); /*VH*/
 }
@@ -102,4 +102,17 @@
 
 .okButton:active {
     background-image: linear-gradient(rgb(0 0 0/20%) 0 0);
+}
+
+@media (min-width:961px) {
+    .visible, .hidden {
+        left: 40vw;
+        padding: 10px;
+        width: 20vw;
+    }
+
+    .okButton {
+        height: calc(var(--vh, 1vh) * 1); /*VH*/
+    }
+    
 }

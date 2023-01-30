@@ -101,7 +101,7 @@
 }
 
 .shareButton {
-    margin-left: 30vw;
+    margin-left: 50%;
     width: 40vw;
     height: 6%;
     border-radius: 20px;
@@ -109,6 +109,7 @@
     border: 0;
     font-weight: bolder;
     color: white;
+    transform: translate(-50%, 0);
 }
 
 .shareButton:hover {
@@ -145,4 +146,39 @@
 
 .closeButton:active {
     background-image: linear-gradient(rgb(0 0 0/20%) 0 0);
+}
+
+@media (min-width:961px) {
+    .boxVisible, .boxHidden {
+        height: calc(var(--vh, 1vh) * 60); /*VH*/
+        padding-left: 20vw;
+        padding-right: 20vw;
+        padding-bottom: 2vh;
+    }
+
+    .closeButton {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 5vh;
+        height: 5vh;
+    
+        border-radius: 50%;
+        border: 0;
+        background-color: white;
+    }
+
+    .separator {
+        margin-bottom: 5px;
+    }
+
+    .shareButton {
+        width: 10vw;
+        height: 7%;
+        border-radius: 20px;
+        background-color: var(--green);
+        border: 0;
+        font-weight: bolder;
+        color: white;
+    }
 }

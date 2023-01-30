@@ -24,3 +24,9 @@
 .toastVisible {
     visibility: 1;
 }
+
+@media (min-width:961px) {
+    .toastVisible, .toastHidden {
+        min-width: 20vw;
+    }
+}
