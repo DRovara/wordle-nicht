@@ -26,7 +26,7 @@ export default function Game(props: GameProps) {
                     <div className={(props.activeRow == row && props.shake) ? styles.boardRowShakey : styles.boardRow} key={"r-" + row}>
                     {
                         new Array(5).fill(0).map((_, column) => (
-                            <div className={(props.results[row][column] == -1 ? "" : (props.results[row][column] == 0 ? styles.cellGrey : (props.results[row][column] == 1 ? styles.cellAmber : styles.cellGreen))) + " " + (column != 4 ? styles.boardCell : styles.boardCellLast) + (props.activeRow == row && props.activeColumn == column ? " " + styles.boardCellSelected : "")} key={"c-" + row + "-" + column} onClick={() => props.boardClicked(row, column)}>
+                            <div onMouseDown={() => props.boardClicked(row, column)} className={(props.results[row][column] == -1 ? "" : (props.results[row][column] == 0 ? styles.cellGrey : (props.results[row][column] == 1 ? styles.cellAmber : styles.cellGreen))) + " " + (column != 4 ? styles.boardCell : styles.boardCellLast) + (props.activeRow == row && props.activeColumn == column ? " " + styles.boardCellSelected : "")} key={"c-" + row + "-" + column}>
                                 <div className={styles.contents + " " + (props.results[row][column] == -1 ? "" : styles.contentsEntered)} key={"ct-" + row + "-" + column}>{props.data[row][column].toUpperCase()}</div>
                             </div>
                         ))

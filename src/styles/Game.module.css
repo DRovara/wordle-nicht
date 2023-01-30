@@ -9,11 +9,10 @@
 
 .boardRow, .boardRowShakey {
     margin-bottom: 5px;
-    flex-grow: 1;
+    flex: 1;
 
     display: flex;
     flex-direction: row;
-    flex-basis: 0;
 }   
 
 .boardRowShakey {
@@ -22,8 +21,7 @@
 
 .boardCell, .boardCellLast {
     border: 2px solid black;
-    flex-grow: 1;
-    flex-basis: 0;
+    flex: 1;
     text-align: center;
 }
 
