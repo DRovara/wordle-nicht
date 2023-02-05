@@ -16,7 +16,7 @@
 
     transition: opacity 0.2s ease-out;
 
-    height: calc(var(--vh, 1vh) * 40); /*VH*/
+    min-height: calc(var(--vh, 1vh) * 40); /*VH*/
 
     display: flex;
     flex-direction: column;
