@@ -100,7 +100,7 @@ export default function Summary(props: SummaryProps) { //TODO title
         statSum = 1;
     const distSizes = props.distribution != undefined ? props.distribution.map((val) => Math.floor(val / statSum * 100) + "%") : ["0%", "0%", "0%", "0%", "0%", "0%", "0%"];
 
-    const messages = ["Die Runde läuft noch!", "Hurra! Du hast nicht gewordlet!", "Oh nein... Du hast gewordlet!", "Es sind zu wenige Wörter übrig..."];
+    const messages = ["Die Runde läuft noch!", "Hurra! Du hast nicht gewordlet! Die Lösung war " + props.gameState?.getSolution() + ".", "Oh nein... Du hast gewordlet!", "Es sind zu wenige Wörter übrig..."];
 
     const hide = () => {
         props.closeCick();
