@@ -143,7 +143,7 @@ After running the development or release version of _wordle nicht!_, you can acc
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-In _wordle nicht!_ it is your goal to enter six guess words consisting of five letters each, without accidentally entering the secret solution word. However, there is a catch: After each guess, letters are marked to indicate their role in the result:
+In _wordle nicht!_ it is your goal to enter six guess words consisting of five letters each without accidentally entering the secret solution word. However, there is a catch: After each guess, letters are marked to indicate their role in the result:
 - **green** letters appear in the solution at exactly the same place.
 - **amber** letters appear in the solution but at a different place.
 - **grey** letters do not appear in the solution at all.
