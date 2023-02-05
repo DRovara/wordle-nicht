@@ -87,8 +87,8 @@
     border: 2px solid rgb(var(--foreground-rgb));
     padding-left: 2vw;
     padding-right: 2vw;
-    padding-top: 0.5vh;
-    padding-bottom: 0.5vh;
+    padding-top: calc(var(--vh, 1vh) * 0.5); /*VH*/
+    padding-bottom: calc(var(--vh, 1vh) * 0.5); /*VH*/
     font-size: x-large;
     font-weight: bold;
     width: 100%;
