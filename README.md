@@ -77,7 +77,7 @@
  <img src="images/screenshot.png" alt="alt text" width="50%">
 </div>
 
-This is a German implementation of the word game "Don't Wordle", a variation of "Wordle" where it is your goal, to <b>NOT</b> find the daily solution.
+This is a German implementation of the word game "Don't Wordle", a variation of "Wordle", where it is your goal to <b>NOT</b> find the daily solution.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
