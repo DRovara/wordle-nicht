@@ -3,7 +3,7 @@ def make(path: str, output: str) -> None:
     with open(path, "r", encoding="utf8", errors="ignore") as file:
         lines = file.readlines()
         x = [line.strip().replace("ß", "ss").replace("ä", "ae").replace("Ä", "ae").replace("ö", "oe").replace("Ö", "oe").replace("ü", "ue").replace("Ü", "ue").upper() for line in lines]
-        x = [y for y in x if len(y) == 5]
+        x = [y for y in x if len(y) == 5 and y.isalpha()]
     with open(output, "w") as file:
         for line in x:
             file.write(line + "\n")
@@ -19,9 +19,10 @@ def combine(paths: str, output: str) -> None:
         file.writelines(l)
 
 if __name__ == "__main__":
-    #inputs = ["deutsch.txt", "deutsch2.txt", "at.txt", "65.txt"]
-    inputs = ["deutsch.txt", "deutsch2.txt"]
-    output = "solutions.txt" #"wordlist.txt"
+    inputs = ["deutsch.txt", "deutsch2.txt", "at.txt", "65.txt"]
+    #inputs = ["deutsch.txt", "deutsch2.txt"]
+    output = "wordlist.txt"
+    #output = "solutions.txt"
     for i, inp in enumerate(inputs):
         make(inp, "temp" + str(i))
     combine(["temp" + str(i) for i, _ in enumerate(inputs)], output)
